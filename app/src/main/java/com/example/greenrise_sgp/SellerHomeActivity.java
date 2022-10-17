@@ -9,6 +9,7 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -22,14 +23,20 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 import java.util.UUID;
 
 public class SellerHomeActivity extends AppCompatActivity {
@@ -39,6 +46,7 @@ public class SellerHomeActivity extends AppCompatActivity {
     StorageReference storageReference;
     DatabaseReference reference;
     int Image_Request_Code = 7;
+    long maxid = 0;
     ProgressDialog progressDialog;
     ImageView imageView;
     Uri FilePathUri;
@@ -57,6 +65,7 @@ public class SellerHomeActivity extends AppCompatActivity {
         storageReference = FirebaseStorage.getInstance().getReference("Images");
         reference = FirebaseDatabase.getInstance().getReference("Plants");
         progressDialog = new ProgressDialog(SellerHomeActivity.this);
+        progressDialog.setCanceledOnTouchOutside(false);
         up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,7 +78,48 @@ public class SellerHomeActivity extends AppCompatActivity {
         addp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Upload();
+                //Upload();
+                if(FilePathUri!=null){
+                    //String key = reference.child("Plants").push().getKey();
+                    String Name = name.getText().toString().trim();
+                    String About = about.getText().toString().trim();
+                    Integer Price = Integer.parseInt(price.getText().toString().trim());
+                    Integer Quantity = Integer.parseInt(quantity.getText().toString().trim());
+
+                    if(Name.isEmpty() || About.isEmpty()){
+                        Toast.makeText(SellerHomeActivity.this, "All the fields are required", Toast.LENGTH_LONG).show();
+                    }
+                    else{
+                        progressDialog.setTitle("Uploading...");
+                        progressDialog.setMessage("Please wait while we upload the data");
+                        progressDialog.show();
+                        StorageReference str = storageReference.child(System.currentTimeMillis()+"."+GetFileExtension(FilePathUri));
+                        str.putFile(FilePathUri)
+                                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                    @Override
+                                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                        progressDialog.dismiss();
+                                        Toast.makeText(SellerHomeActivity.this, "Data Uploaded...", Toast.LENGTH_SHORT).show();
+                                        str.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                            @Override
+                                            public void onSuccess(Uri uri) {
+                                                String ImageUploadId = reference.push().getKey();
+                                               // String Key = ImageUploadId;
+                                               // plant = new Plant(Name,About,Price,Quantity,uri.toString(),ImageUploadId, ServerValue.TIMESTAMP);
+                                               plant = new Plant(Name,About,Price,Quantity,uri.toString(),ImageUploadId);
+                                               // reference.child(String.valueOf(maxid+1)).setValue(plant);
+                                                reference.child(ImageUploadId).setValue(plant);
+                                            }
+                                        });
+
+                                    }
+                                });
+                    }
+
+                }
+                else {
+                    Toast.makeText(SellerHomeActivity.this, "Please select image", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         viewp.setOnClickListener(new View.OnClickListener() {
@@ -79,13 +129,26 @@ public class SellerHomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    maxid = snapshot.getChildrenCount();
+                }
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==Image_Request_Code && resultCode==RESULT_OK && data!=null && data.getData()!=null){
             FilePathUri = data.getData();
+            imageView.setImageURI(FilePathUri);
         }
     }
     public String GetFileExtension(Uri uri) {
@@ -95,37 +158,9 @@ public class SellerHomeActivity extends AppCompatActivity {
         return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri)) ;
 
     }
-    private void Upload() {
-        if(FilePathUri!=null){
-            progressDialog.setTitle("Uploading...");
-            progressDialog.setMessage("Please wait while we upload the image");
-            progressDialog.show();
-            String Name = name.getText().toString().trim();
-            String About = about.getText().toString().trim();
-            Integer Price = Integer.parseInt(price.getText().toString().trim());
-            Integer Quantity = Integer.parseInt(quantity.getText().toString().trim());
-            StorageReference str = storageReference.child(System.currentTimeMillis()+"."+GetFileExtension(FilePathUri));
-            str.putFile(FilePathUri)
-                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            progressDialog.dismiss();
-                            Toast.makeText(SellerHomeActivity.this, "Data Uploaded...", Toast.LENGTH_SHORT).show();
-                            str.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                @Override
-                                public void onSuccess(Uri uri) {
-                                    plant = new Plant(Name,About,Price,Quantity,uri.toString());
-                                    String ImageUploadId = reference.push().getKey();
-                                    reference.child(ImageUploadId).setValue(plant);
-                                }
-                            });
 
-                        }
-                    });
-        }
-        else {
-            Toast.makeText(SellerHomeActivity.this, "Please select image", Toast.LENGTH_SHORT).show();
-        }
-    }
+//    private void Upload() {
+//
+//    }
 
 }

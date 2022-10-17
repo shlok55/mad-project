@@ -3,9 +3,11 @@ package com.example.greenrise_sgp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,13 +15,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
 
 public class SellerLoginActivity extends AppCompatActivity {
     EditText email_login, pass_login;
@@ -28,6 +34,7 @@ public class SellerLoginActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser mUser;
     GoogleSignInClient googleSignInClient;
+    ProgressDialog progressDialog;
     private static final int RC_SIGN_IN = 1;
     private static final String TAG = "GOOGLEAUTH";
 
@@ -39,12 +46,9 @@ public class SellerLoginActivity extends AppCompatActivity {
         pass_login = findViewById(R.id.LoginPasswd);
         loginbtn = findViewById(R.id.loginbtn);
         google_login = findViewById(R.id.googlesignin);
+        progressDialog = new ProgressDialog(this);
         reg = findViewById(R.id.regtv);
         mAuth = FirebaseAuth.getInstance();
-//        if (mAuth.getCurrentUser() != null) {
-//            finish();
-//            return;
-//        }
         forpass = findViewById(R.id.forgotpass);
         forpass.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,17 +71,63 @@ public class SellerLoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        googleSignInClient = GoogleSignIn.getClient(this,gso);
         google_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SellerLoginActivity.this, GoogleLoginActivity.class);
-                startActivity(intent);
+                SignIn();
             }
         });
     }
+    private void SignIn() {
+        Intent intent = googleSignInClient.getSignInIntent();
+        startActivityForResult(intent, RC_SIGN_IN);
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
+        if (requestCode == RC_SIGN_IN) {
+
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            try {
+                // Google Sign In was successful, authenticate with Firebase
+                GoogleSignInAccount account = task.getResult(ApiException.class);
+                firebaseAuthWithGoogle(account.getIdToken());
+            } catch (ApiException e) {
+                Log.w(TAG, "Google sign in failed", e);
+
+            }
+        }
+    }
+    private void firebaseAuthWithGoogle(String idToken) {
+        AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Log.d(TAG, "signInWithCredential:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            Intent i = new Intent(SellerLoginActivity.this, SellerHomeActivity.class);
+                            startActivity(i);
+                            finish();
+                        } else {
+                            Toast.makeText(SellerLoginActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
 
     private void authenticate_user() {
+        progressDialog.setTitle("Login...");
+        progressDialog.setMessage("Wait while we authenticate...");
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.show();
 
 
         String email = email_login.getText().toString();
@@ -90,19 +140,6 @@ public class SellerLoginActivity extends AppCompatActivity {
             pass_login.setError("Password is required!");
         }
         else{
-            mAuth.signInWithEmailAndPassword(email,pass)
-                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if(task.isSuccessful()){
-                                        Intent intent = new Intent(SellerLoginActivity.this, SellerHomeActivity.class);
-                                        startActivity(intent);
-                                    }
-                                    else {
-                                        Toast.makeText(SellerLoginActivity.this, "Invalid email or password!", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
             mAuth.signInWithEmailAndPassword(email, pass)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -111,6 +148,7 @@ public class SellerLoginActivity extends AppCompatActivity {
                                 Intent intent = new Intent(SellerLoginActivity.this, SellerHomeActivity.class);
                                 startActivity(intent);
                             } else {
+                                progressDialog.dismiss();
                                 Toast.makeText(SellerLoginActivity.this, "Invalid email or password!", Toast.LENGTH_SHORT).show();
                             }
                         }

@@ -31,9 +31,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
 
 public class SellerRegisterActivity extends AppCompatActivity {
-    EditText name_var, email_var, phone_var, pass_var, confpass_var;
+    EditText name_var, email_var, phone_var, pass_var, confpass_var,upiid_var;
     TextView log, google_signin;
     Button regbutton;
     Spinner selltype_var;
@@ -134,6 +135,7 @@ public class SellerRegisterActivity extends AppCompatActivity {
         phone_var = findViewById(R.id.Phone);
         pass_var = findViewById(R.id.RegPasswd);
         confpass_var = findViewById(R.id.ConfRegPasswd);
+        upiid_var = findViewById(R.id.UPIid);
 
         String name = name_var.getText().toString();
         String email = email_var.getText().toString();
@@ -141,6 +143,7 @@ public class SellerRegisterActivity extends AppCompatActivity {
         String pass = pass_var.getText().toString();
         String confpass = confpass_var.getText().toString();
         String selltype = selltype_var.getSelectedItem().toString();
+        String upiid = upiid_var.getText().toString();
         if(TextUtils.isEmpty(name)){
             name_var.setError("Name is required!");
         }
@@ -159,6 +162,9 @@ public class SellerRegisterActivity extends AppCompatActivity {
         else if(selltype_var.getSelectedItem().toString().trim().equals("Seller Type")){
             Toast.makeText(SellerRegisterActivity.this, "Select Seller Type", Toast.LENGTH_SHORT).show();
         }
+        else if(TextUtils.isEmpty(upiid)){
+            email_var.setError("Enter Proper UPI ID!");
+        }
         else{
             progressDialog.setTitle("Registration...");
             progressDialog.setMessage("Wait while we register your data...");
@@ -170,7 +176,7 @@ public class SellerRegisterActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Seller seller = new Seller(name, email, phone, pass, confpass, selltype);
+                                Seller seller = new Seller(name, email, phone, pass, confpass, selltype,upiid);
                                 FirebaseDatabase.getInstance().getReference("Sellers")
                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                         .setValue(seller).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -182,6 +188,7 @@ public class SellerRegisterActivity extends AppCompatActivity {
                                         });
                             } else {
                                 Toast.makeText(SellerRegisterActivity.this, "Error: "+task.getException(), Toast.LENGTH_SHORT).show();
+                                progressDialog.dismiss();
                             }
                         }
                     });

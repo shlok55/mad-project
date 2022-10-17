@@ -16,9 +16,6 @@
         android:theme="@style/Theme.Greenrise_SGP"
         tools:targetApi="31">
         <activity
-            android:name=".GoogleLoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".OTPForegetpassActivity"
             android:exported="false" />
         <activity
