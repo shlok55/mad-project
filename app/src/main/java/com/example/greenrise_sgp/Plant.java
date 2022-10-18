@@ -11,20 +11,11 @@ public class Plant implements Serializable {
     private Integer quantity;
     private String image;
     private String key;
-    public Map timestamp;
 
     public Plant(){
 
     }
-//    public Plant(String name, String about, Integer price, Integer quantity, String image, String key) {
-//        this.name = name;
-//        this.about = about;
-//        this.price = price;
-//        this.quantity = quantity;
-//        this.image = image;
-//        this.key = key;
-//
-//    }
+
 
 
     public Plant(String name, String about, Integer price, Integer quantity, String image, String key) {

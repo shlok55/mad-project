@@ -24,20 +24,20 @@
             android:scaleType="centerCrop"
             android:src="@drawable/googlelogo" />
 
-    <TextView
-        android:id="@+id/plantname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_toRightOf="@id/plantimage"
-        android:text="Name"
-        android:textColor="@color/green"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/plantname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/plantimage"
+            android:text="Plant Name"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/plantabout"
@@ -50,7 +50,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_toRightOf="@id/plantimage"
-            android:text="Desc"
+            android:text="Plant Description"
             android:textColor="@color/black"
             android:textSize="16sp" />
 
@@ -78,7 +78,7 @@
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
             android:layout_toRightOf="@id/plantprice1"
-            android:text="50"
+            android:text="XXX"
             android:textColor="@color/green"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -108,38 +108,8 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_toRightOf="@id/plantquantity1"
-            android:text="500"
+            android:text="XXX"
             android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/plantdatetime1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/plantquantity1"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="10dp"
-            android:layout_toRightOf="@id/plantimage"
-            android:text="Added on: "
-            android:textColor="@color/green"
-
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/plantdatetime"
-            android:layout_width="184dp"
-            android:layout_height="32dp"
-            android:layout_below="@id/plantquantity"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_toRightOf="@id/plantdatetime1"
-            android:text="DD/MM/YYYY HH:MM"
-            android:textColor="@color/green"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -147,7 +117,7 @@
             android:id="@+id/updatelogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/plantdatetime1"
+            android:layout_below="@id/plantquantity1"
             android:layout_marginLeft="75dp"
             android:layout_toRightOf="@id/plantimage"
             android:src="@drawable/ic_baseline_create_24"
@@ -157,11 +127,11 @@
             android:id="@+id/deletelogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/plantdatetime1"
+            android:layout_below="@id/plantquantity1"
             android:layout_marginLeft="20dp"
             android:layout_toRightOf="@id/updatelogo"
             android:src="@drawable/ic_baseline_delete_forever_24"
-            app:tint="@color/black" />
+            app:tint="@color/green" />
     </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
