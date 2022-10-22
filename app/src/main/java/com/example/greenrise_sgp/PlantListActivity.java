@@ -7,9 +7,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.ColorSpace;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -17,6 +19,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.model.Model;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseException;
@@ -36,11 +39,12 @@ public class PlantListActivity extends AppCompatActivity {
     ArrayList<Plant> list;
     PlantAdapter adapter;
     DatabaseReference reference;
-    Query query;
+    BottomNavigationView bnv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plant_list2);
+        bnv = findViewById(R.id.bottomnav);
         recyclerView = findViewById(R.id.plantlist);
         recyclerView.setHasFixedSize(true);
         reference = FirebaseDatabase.getInstance().getReference("Plants");
@@ -48,7 +52,6 @@ public class PlantListActivity extends AppCompatActivity {
         list = new ArrayList<>();
         adapter = new PlantAdapter(this, list);
         recyclerView.setAdapter(adapter);
-
         reference.addValueEventListener(new ValueEventListener() {
             @SuppressLint("NotifyDataSetChanged")
             @Override
@@ -71,6 +74,27 @@ public class PlantListActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+        bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId())
+                {
+                    case R.id.homei:
+                        Intent intent = new Intent(PlantListActivity.this,SellerHomeActivity.class);
+                        startActivity(intent);
+                        return true;
+                    case R.id.profilei:
+                        Intent intent1 = new Intent(PlantListActivity.this,SellerProfileActivity.class);
+                        startActivity(intent1);
+                        return true;
+                    case R.id.carti:
+                        Intent intent2 = new Intent(PlantListActivity.this,SellerOrdersActivity.class);
+                        startActivity(intent2);
+                        return true;
+                }
+                return false;
             }
         });
 }

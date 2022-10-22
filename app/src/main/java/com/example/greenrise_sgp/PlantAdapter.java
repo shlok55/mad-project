@@ -97,7 +97,8 @@ public class PlantAdapter extends RecyclerView.Adapter<PlantAdapter.myViewHolder
         // String key = databaseReference.child("Plants").push().getKey();
         @SuppressLint("SimpleDateFormat")
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
-
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference reference = firebaseDatabase.getReference("Plants");
         Plant plant = list.get(position);
         holder.namev.setText(plant.getName());
         holder.aboutv.setText(plant.getAbout());
@@ -126,8 +127,7 @@ public class PlantAdapter extends RecyclerView.Adapter<PlantAdapter.myViewHolder
                 etprice.setText(String.valueOf(plant.getPrice()));
                 etquantity.setText(String.valueOf(plant.getQuantity()));
                 dialogPlus.show();
-                FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-                DatabaseReference reference = firebaseDatabase.getReference("Plants");
+
                 up.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -140,14 +140,13 @@ public class PlantAdapter extends RecyclerView.Adapter<PlantAdapter.myViewHolder
                                     if(dataSnapshot.child("key").getValue().toString().equals(plant.getKey()))
                                     {
                                        // String path = dataSnapshot.getKey();
-                                       // DatabaseReference reference = dataSnapshot.getRef();
+//                                        DatabaseReference reference = dataSnapshot.getRef();
                                         Map<String,Object> map = new HashMap<>();
                                         map.put("name",etname.getText().toString());
                                         map.put("about",etabout.getText().toString());
                                         map.put("price",etprice.getText().toString());
                                         map.put("quantity",etquantity.getText().toString());
-                                        reference.child(dataSnapshot.child("key").getValue().toString())
-                                                .updateChildren(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        reference.child(dataSnapshot.child("key").getValue().toString()).updateChildren(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 try{
@@ -181,18 +180,36 @@ public class PlantAdapter extends RecyclerView.Adapter<PlantAdapter.myViewHolder
         holder.delbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                databaseReference.child("Plants").child(plant.getKey()).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void unused) {
-                                Toast.makeText(holder.namev.getContext(), "Data Deleted", Toast.LENGTH_SHORT).show();
+                reference.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for(DataSnapshot dataSnapshot : snapshot.getChildren())
+                        {
+                            if(dataSnapshot.child("key").getValue().toString().equals(plant.getKey()))
+                            {
+                                reference.child(dataSnapshot.child("key").getValue().toString()).removeValue()
+                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void unused) {
+                                                Toast.makeText(holder.namev.getContext(), "Data Deleted", Toast.LENGTH_SHORT).show();
+                                            }
+                                        })
+                                        .addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Toast.makeText(holder.namev.getContext(), "Error occured!"+e.getMessage(), Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
                             }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(holder.namev.getContext(), "Error occured!"+e.getMessage(), Toast.LENGTH_SHORT).show();
-                            }
-                        });
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
             }
         });
     }

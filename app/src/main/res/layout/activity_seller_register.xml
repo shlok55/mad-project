@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,174 +8,172 @@
     tools:context=".SellerRegisterActivity">
 
     <TextView
-        android:id="@+id/logtv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="16dp"
-        android:text="Login"
-        android:textColor="#025A0F"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/googlesignin"
-        app:layout_constraintTop_toBottomOf="@+id/googlesignin" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="159dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="94dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="3dp"
-        android:text="Already A Member?"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/googlesignin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/googlesignin" />
-
-    <EditText
-        android:id="@+id/Phone"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="18dp"
-        android:ems="10"
-        android:hint="Phone Number"
-        android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/RegPasswd"
-        app:layout_constraintEnd_toEndOf="@+id/RegPasswd"
-        app:layout_constraintStart_toStartOf="@+id/RegPasswd"
-        app:layout_constraintTop_toBottomOf="@+id/Email" />
-
-    <EditText
-        android:id="@+id/RegPasswd"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="18dp"
-        android:ems="10"
-        android:hint="Create Password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/ConfRegPasswd"
-        app:layout_constraintEnd_toEndOf="@+id/ConfRegPasswd"
-        app:layout_constraintStart_toStartOf="@+id/ConfRegPasswd"
-        app:layout_constraintTop_toBottomOf="@+id/Phone" />
-
-
-    <EditText
-        android:id="@+id/Name"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="17dp"
-        android:ems="10"
-        android:hint="Your Name"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/Email"
-        app:layout_constraintEnd_toEndOf="@+id/Email"
-        app:layout_constraintStart_toStartOf="@+id/Email"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <EditText
-        android:id="@+id/Email"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:hint="Your Email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/Phone"
-        app:layout_constraintEnd_toEndOf="@+id/Phone"
-        app:layout_constraintStart_toStartOf="@+id/Phone"
-        app:layout_constraintTop_toBottomOf="@+id/Name" />
-
-    <EditText
-        android:id="@+id/ConfRegPasswd"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="15dp"
-        android:ems="10"
-        android:hint="Confirm Password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/UPIid"
-        app:layout_constraintEnd_toEndOf="@+id/UPIid"
-        app:layout_constraintStart_toStartOf="@+id/UPIid"
-        app:layout_constraintTop_toBottomOf="@+id/RegPasswd" />
-
-    <EditText
-        android:id="@+id/UPIid"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="73dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:hint="UPI ID"
-        app:layout_constraintBottom_toTopOf="@+id/SellerType"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ConfRegPasswd" />
-
-    <Spinner
-        android:id="@+id/SellerType"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="9dp"
-        android:prompt="@string/spinner_title"
-        app:layout_constraintBottom_toTopOf="@+id/passbtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UPIid" />
-
-    <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="serif"
         android:text="Create\nAccount"
         android:textColor="@color/green"
         android:textSize="40dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/Name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
 
-    <Button
-        android:id="@+id/passbtn"
-        android:layout_width="0dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="73dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="@color/green"
-        android:backgroundTintMode="add"
-        android:elevation="100dp"
-        android:text="Register"
-        app:cornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/googlesignin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SellerType"
-        app:strokeColor="@color/green" />
+        android:layout_below="@id/textView6"
+        android:layout_marginRight="35dp"
+        android:gravity="center">
 
-    <TextView
-        android:id="@+id/googlesignin"
-        android:layout_width="246dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="656dp"
-        android:layout_marginBottom="9dp"
-        android:background="@drawable/back"
-        android:drawableLeft="@drawable/google"
-        android:drawablePadding="2dp"
-        android:padding="3dp"
-        android:text="Sign up with Google"
-        android:textColor="@color/green"
-        app:layout_constraintBottom_toTopOf="@+id/logtv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/logtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/googlesignin"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/textView5"
+            android:text="Login"
+            android:textColor="#025A0F"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="253dp"
+            tools:layout_editor_absoluteY="695dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/googlesignin"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="15dp"
+            android:gravity="left"
+            android:text="Already A Member?"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="686dp" />
+
+        <EditText
+            android:id="@+id/Phone"
+            android:layout_width="250dp"
+            android:layout_height="47dp"
+            android:layout_below="@id/Email"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="289dp" />
+
+        <EditText
+            android:id="@+id/RegPasswd"
+            android:layout_width="250dp"
+            android:layout_height="47dp"
+            android:layout_below="@id/Phone"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:hint="Create Password"
+            android:inputType="textPassword"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="354dp" />
+
+
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="250dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="Your Name"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="162dp" />
+
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="250dp"
+            android:layout_height="47dp"
+            android:layout_below="@id/Name"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:hint="Your Email"
+            android:inputType="textEmailAddress"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="226dp" />
+
+        <EditText
+            android:id="@+id/ConfRegPasswd"
+            android:layout_width="250dp"
+            android:layout_height="47dp"
+            android:layout_below="@id/RegPasswd"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="419dp" />
+
+        <EditText
+            android:id="@+id/UPIid"
+            android:layout_width="250dp"
+            android:layout_height="47dp"
+            android:layout_below="@id/ConfRegPasswd"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:hint="UPI ID"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="481dp" />
+
+        <Spinner
+            android:id="@+id/SellerType"
+            android:layout_width="250dp"
+            android:layout_height="47dp"
+            android:layout_below="@id/UPIid"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:prompt="@string/spinner_title"
+            tools:layout_editor_absoluteX="76dp"
+            tools:layout_editor_absoluteY="544dp" />
+
+
+        <Button
+            android:id="@+id/passbtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SellerType"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/green"
+            android:backgroundTintMode="add"
+            android:elevation="100dp"
+            android:text="Register"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/green"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="600dp" />
+
+        <TextView
+            android:id="@+id/googlesignin"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/passbtn"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/back"
+            android:drawableLeft="@drawable/google"
+            android:drawablePadding="2dp"
+            android:padding="3dp"
+            android:text="Sign up with Google"
+            android:textColor="@color/green"
+            tools:layout_editor_absoluteX="83dp"
+            tools:layout_editor_absoluteY="656dp" />
+    </RelativeLayout>
+</RelativeLayout>

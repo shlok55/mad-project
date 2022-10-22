@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -22,6 +23,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -43,6 +45,7 @@ public class SellerHomeActivity extends AppCompatActivity {
     Button addp,viewp,up;
     EditText name,about,price,quantity;
     Plant plant;
+    BottomNavigationView bnv;
     StorageReference storageReference;
     DatabaseReference reference;
     int Image_Request_Code = 7;
@@ -62,10 +65,31 @@ public class SellerHomeActivity extends AppCompatActivity {
         price = findViewById(R.id.Pprice);
         quantity = findViewById(R.id.Pquantity);
         imageView = findViewById(R.id.pimage);
+        bnv = findViewById(R.id.bottomnav);
         storageReference = FirebaseStorage.getInstance().getReference("Images");
         reference = FirebaseDatabase.getInstance().getReference("Plants");
         progressDialog = new ProgressDialog(SellerHomeActivity.this);
         progressDialog.setCanceledOnTouchOutside(false);
+        bnv.setSelectedItemId(R.id.homei);
+        bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId())
+                {
+                    case R.id.homei:
+                        return true;
+                    case R.id.profilei:
+                        Intent intent1 = new Intent(SellerHomeActivity.this,SellerProfileActivity.class);
+                        startActivity(intent1);
+                        return true;
+                    case R.id.carti:
+                        Intent intent2 = new Intent(SellerHomeActivity.this,SellerOrdersActivity.class);
+                        startActivity(intent2);
+                        return true;
+                }
+                return false;
+            }
+        });
         up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -109,6 +133,8 @@ public class SellerHomeActivity extends AppCompatActivity {
                                                plant = new Plant(Name,About,Price,Quantity,uri.toString(),ImageUploadId);
                                                // reference.child(String.valueOf(maxid+1)).setValue(plant);
                                                 reference.child(ImageUploadId).setValue(plant);
+                                                Intent intent = new Intent(SellerHomeActivity.this, SellerHomeActivity.class);
+                                                startActivity(intent);
                                             }
                                         });
 
