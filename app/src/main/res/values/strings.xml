@@ -1,4 +1,17 @@
 <resources>
-    <string name="app_name">Greenrise_SGP</string>
+    <string name="app_name">Greenrise</string>
     <string name="spinner_title">Seller Type</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_content">See All Your Products</string>
+    <string name="blank"></string>
+    <string name="Profile">Profile</string>
+    <string name="Home">Home</string>
+    <string name="Buy">Buy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="p1">p1</string>
+    <string name="p2">p2</string>
+    <string name="p3">p3</string>
+    <string name="SeasonsFav">Seasons Favorite</string>
 </resources>

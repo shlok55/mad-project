@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,32 +35,16 @@ public class SellerProfileActivity extends AppCompatActivity {
         buyer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SellerProfileActivity.this, SellerHomeActivity.class);
+                Intent intent = new Intent(SellerProfileActivity.this, homePage.class);
                 startActivity(intent);
             }
         });
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("Sellers");
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot:snapshot.getChildren())
-                {
-                    if(dataSnapshot.child("email").getValue().equals(email))
-                    {
-                        name.setText(dataSnapshot.child("name").getValue(String.class));
-                        email.setText(dataSnapshot.child("email").getValue(String.class));
-                        type.setText(dataSnapshot.child("selltype").getValue(String.class));
-                        upi.setText(dataSnapshot.child("upiid").getValue(String.class));
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
+        name.setText(CurrentSeller.currentSeller.getName());
+        email.setText(CurrentSeller.currentSeller.getEmail());
+        type.setText(CurrentSeller.currentSeller.getSelltype());
+        upi.setText(CurrentSeller.currentSeller.getUpiid());
         bnv.setSelectedItemId(R.id.profilei);
         bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
