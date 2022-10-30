@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/bg_login_reg"
-    tools:context=".SellerLoginActivity">
+    android:layout_height="match_parent"
+    tools:context=".UserLoginActivity"
+    android:background="@drawable/bg_login_reg">
 
     <TextView
         android:id="@+id/textView2"
@@ -19,57 +19,58 @@
         android:textStyle="bold"
         tools:layout_editor_absoluteX="12dp"
         tools:layout_editor_absoluteY="118dp" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/textView2"
-        android:gravity="center"
         android:layout_marginRight="35dp"
-        >
-    <EditText
-        android:id="@+id/LoginPasswd"
-        android:layout_width="259dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:hint="Password"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="15dp"
-        android:layout_below="@id/LoginEmail"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="368dp" />
+        android:gravity="center">
 
-    <TextView
-        android:id="@+id/regtv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="25dp"
-        android:layout_below="@id/googlesignin"
-        android:layout_toRightOf="@id/textView4"
-        android:textColor="@color/green"
-        android:textSize="15dp"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="611dp" />
+        <EditText
+            android:id="@+id/UserLoginPasswd"
+            android:layout_width="259dp"
+            android:layout_height="54dp"
+            android:layout_below="@id/UserLoginEmail"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            tools:layout_editor_absoluteX="76dp"
+            tools:layout_editor_absoluteY="368dp" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/Userregtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Usergooglesignin"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@id/UsertextView4"
+            android:text="Register"
+            android:textColor="@color/green"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="266dp"
+            tools:layout_editor_absoluteY="611dp" />
+
+        <TextView
+            android:id="@+id/UsertextView4"
             android:layout_width="176dp"
             android:layout_height="30dp"
-            android:text="Want to become a family?"
+            android:layout_below="@id/Usergooglesignin"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="25dp"
-            android:layout_below="@id/googlesignin"
+            android:text="Want to become a family?"
             android:textSize="15dp"
             tools:layout_editor_absoluteX="90dp"
             tools:layout_editor_absoluteY="610dp" />
 
         <Button
-            android:id="@+id/loginbtn"
+            android:id="@+id/Userloginbtn"
             android:layout_width="262dp"
             android:layout_height="48dp"
-            android:layout_below="@id/forgotpass"
+            android:layout_below="@id/Userforgotpass"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="15dp"
             android:backgroundTint="@color/green"
@@ -82,10 +83,10 @@
 
 
         <TextView
-            android:id="@+id/googlesignin"
+            android:id="@+id/Usergooglesignin"
             android:layout_width="246dp"
             android:layout_height="30dp"
-            android:layout_below="@id/loginbtn"
+            android:layout_below="@id/Userloginbtn"
             android:layout_marginLeft="45dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/back"
@@ -98,19 +99,19 @@
             tools:layout_editor_absoluteY="543dp" />
 
         <TextView
-        android:id="@+id/forgotpass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot Password?"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/LoginPasswd"
-        android:textColor="#025A0F"
-        tools:layout_editor_absoluteX="212dp"
-        tools:layout_editor_absoluteY="424dp" />
+            android:id="@+id/Userforgotpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/UserLoginPasswd"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="10dp"
+            android:text="Forgot Password?"
+            android:textColor="#025A0F"
+            tools:layout_editor_absoluteX="212dp"
+            tools:layout_editor_absoluteY="424dp" />
 
         <EditText
-            android:id="@+id/LoginEmail"
+            android:id="@+id/UserLoginEmail"
             android:layout_width="259dp"
             android:layout_height="55dp"
             android:layout_marginLeft="35dp"

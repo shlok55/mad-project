@@ -39,6 +39,7 @@ public class ForgetPass extends AppCompatActivity {
         String Email = email.getText().toString().trim();
         if(Email.isEmpty()){
             email.setError("Error is required!");
+            email.setText(CurrentSeller.currentSeller.getEmail());
         }
         if(!Patterns.EMAIL_ADDRESS.matcher(Email).matches()){
             email.setError("Enter valid email!");
