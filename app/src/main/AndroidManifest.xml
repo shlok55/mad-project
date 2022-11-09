@@ -17,6 +17,16 @@
         android:theme="@style/Theme.Greenrise_SGP"
         tools:targetApi="31">
         <activity
+            android:name=".SellerInformationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_seller_information"
+            android:theme="@style/Theme.Greenrise_SGP.NoActionBar" />
+        <activity
+            android:name=".ForgetPassUser"
+            android:exported="false"
+            android:label="@string/title_activity_forget_pass_user"
+            android:theme="@style/Theme.Greenrise_SGP.NoActionBar" />
+        <activity
             android:name=".UserLoginActivity"
             android:exported="false" />
         <activity

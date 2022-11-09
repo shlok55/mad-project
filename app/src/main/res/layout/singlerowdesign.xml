@@ -9,11 +9,28 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@id/img1"
-        android:text="This is  Name"
+        android:text="Name"
         android:textColor="#000"
         android:textSize="25sp"
         android:textStyle="bold" />
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/price" android:text="This is Price" android:textSize="25sp" android:textColor="#000" android:layout_toRightOf="@id/img1" android:layout_below="@id/nametext" android:layout_marginLeft="10dp"/>
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/quantity" android:text="This is Quantity" android:textSize="25sp" android:textColor="#000" android:layout_toRightOf="@id/img1" android:layout_below="@id/price" android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/price"
+        android:text="Price"
+        android:textSize="25sp"
+        android:textColor="#000"
+        android:layout_toRightOf="@id/img1"
+        android:layout_below="@id/nametext"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/quantity" android:text="This is Quantity"
+        android:textSize="25sp"
+        android:textColor="#000"
+        android:layout_toRightOf="@id/img1"
+        android:layout_below="@id/price"
+        android:layout_marginLeft="10dp"/>
 </RelativeLayout>
 </androidx.cardview.widget.CardView>

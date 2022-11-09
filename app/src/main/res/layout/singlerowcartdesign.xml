@@ -23,32 +23,63 @@
             android:id="@+id/nametext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_toRightOf="@id/img1"
-            android:text="This is  Name"
+            android:text="Name"
             android:textColor="#000"
             android:textSize="25sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/price"
-            android:layout_width="match_parent"
+            android:id="@+id/priceTagc"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/nametext"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_toRightOf="@id/img1"
-            android:text="This is Price"
+            android:text="Price: "
+            android:textColor="#000"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nametext"
+            android:layout_toRightOf="@id/priceTagc"
+            android:text="Price"
+            android:textColor="#000"
+            android:textSize="25sp" />
+
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/totalPrice"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageButton"
+            android:text="1"
             android:textColor="#000"
             android:textSize="25sp" />
 
         <TextView
-            android:id="@+id/quantity"
-            android:layout_width="match_parent"
+            android:id="@+id/totalPriceTagC"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/price"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_toRightOf="@id/img1"
-            android:text="This is Quantity"
+            android:text="Total: "
+            android:textColor="#000"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price"
+            android:layout_toRightOf="@id/totalPriceTagC"
+            android:text="Total Price"
             android:textColor="#000"
             android:textSize="25sp" />
 
@@ -56,27 +87,31 @@
             android:id="@+id/imageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/quantity"
+            android:layout_below="@id/totalPriceTagC"
             android:layout_toRightOf="@id/img1"
-            app:srcCompat="@android:drawable/ic_input_add" />
+            app:srcCompat="@drawable/ic_baseline_add_24"
+            android:layout_marginLeft="5dp"
+            app:tint="@color/green" />
 
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/quantity"
-            android:layout_toRightOf="@id/imageButton"
-            app:srcCompat="@android:drawable/ic_delete" />
+            android:layout_below="@id/totalPrice"
+            android:layout_toRightOf="@id/imageButton3"
+            android:layout_marginLeft="5dp"
+            app:srcCompat="@drawable/ic_baseline_delete_24"
+            app:tint="@color/green" />
 
         <ImageButton
             android:id="@+id/imageButton3"
             android:layout_width="45dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/quantity"
-            android:layout_marginLeft="-2dp"
-            android:layout_marginTop="12dp"
-            android:layout_toRightOf="@id/imageButton2"
-            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+            android:layout_below="@id/totalPrice"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/quantity"
+            app:srcCompat="@drawable/ic_baseline_remove_24"
+            app:tint="@color/green" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

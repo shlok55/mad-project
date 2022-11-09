@@ -67,7 +67,7 @@ public class SellerHomeActivity extends AppCompatActivity {
         imageView = findViewById(R.id.pimage);
         bnv = findViewById(R.id.bottomnav);
         storageReference = FirebaseStorage.getInstance().getReference("Images");
-        reference = FirebaseDatabase.getInstance().getReference("Plants");
+        reference = FirebaseDatabase.getInstance().getReference("Plant");
         progressDialog = new ProgressDialog(SellerHomeActivity.this);
         progressDialog.setCanceledOnTouchOutside(false);
         bnv.setSelectedItemId(R.id.homei);
@@ -79,7 +79,7 @@ public class SellerHomeActivity extends AppCompatActivity {
                     case R.id.homei:
                         return true;
                     case R.id.profilei:
-                        Intent intent1 = new Intent(SellerHomeActivity.this,SellerProfileActivity.class);
+                        Intent intent1 = new Intent(SellerHomeActivity.this,SellerInformationActivity.class);
                         startActivity(intent1);
                         return true;
                     case R.id.carti:
@@ -107,8 +107,8 @@ public class SellerHomeActivity extends AppCompatActivity {
                     //String key = reference.child("Plants").push().getKey();
                     String Name = name.getText().toString().trim();
                     String About = about.getText().toString().trim();
-                    Integer Price = Integer.parseInt(price.getText().toString().trim());
-                    Integer Quantity = Integer.parseInt(quantity.getText().toString().trim());
+                    String Price = price.getText().toString().trim();
+                    String Quantity = quantity.getText().toString().trim();
 
                     if(Name.isEmpty() || About.isEmpty()){
                         Toast.makeText(SellerHomeActivity.this, "All the fields are required", Toast.LENGTH_LONG).show();
@@ -128,10 +128,10 @@ public class SellerHomeActivity extends AppCompatActivity {
                                             @Override
                                             public void onSuccess(Uri uri) {
                                                 String ImageUploadId = reference.push().getKey();
-                                               // String Key = ImageUploadId;
-                                               // plant = new Plant(Name,About,Price,Quantity,uri.toString(),ImageUploadId, ServerValue.TIMESTAMP);
-                                               plant = new Plant(Name,About,Price,Quantity,uri.toString(),ImageUploadId);
-                                               // reference.child(String.valueOf(maxid+1)).setValue(plant);
+                                                // String Key = ImageUploadId;
+                                                // plant = new Plant(Name,About,Price,Quantity,uri.toString(),ImageUploadId, ServerValue.TIMESTAMP);
+                                                plant = new Plant(Name,About,Price,Quantity,uri.toString(),ImageUploadId);
+                                                // reference.child(String.valueOf(maxid+1)).setValue(plant);
                                                 reference.child(ImageUploadId).setValue(plant);
                                                 Intent intent = new Intent(SellerHomeActivity.this, SellerHomeActivity.class);
                                                 startActivity(intent);

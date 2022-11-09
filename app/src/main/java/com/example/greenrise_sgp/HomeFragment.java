@@ -16,7 +16,7 @@ public class HomeFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    String email;
 
     private String mParam1;
     private String mParam2;
@@ -26,7 +26,6 @@ public class HomeFragment extends Fragment {
     public HomeFragment() {
 
     }
-
 
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();

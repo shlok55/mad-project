@@ -1,20 +1,29 @@
 package com.example.greenrise_sgp;
 
 public class Model {
-    String about,image,name,price,quantity;
+    String about,image,name,price,quantity,key;
 
     public Model() {
     }
 
-    public Model(String about, String image, String name, String price, String quantity) {
+
+
+    public Model(String about, String image, String name, String price, String quantity, String key) {
         this.about = about;
         this.image = image;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+        this.key=key;
     }
 
+    public String getKey() {
+        return key;
+    }
 
+    public void setKey(String key) {
+        this.key = key;
+    }
     public String getAbout() {
         return about;
     }

@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
-    tools:context=".BuyFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BuyFragment"
+    android:padding="15dp">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -13,13 +14,16 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:text="Proceed to pay" />
+       android:layout_gravity="bottom"
+        android:text="Proceed to pay"
+        android:textColor="@color/green"
+        android:backgroundTint="#77EC79"
+        app:cornerRadius="10dp"
+       />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/conView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 
 </FrameLayout>

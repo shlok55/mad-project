@@ -28,6 +28,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
@@ -53,10 +54,16 @@ public class UserLoginActivity extends AppCompatActivity {
         reg = findViewById(R.id.Userregtv);
         mAuth = FirebaseAuth.getInstance();
         forpass = findViewById(R.id.Userforgotpass);
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//        if(user != null)
+//        {
+//            Intent intent = new Intent(UserLoginActivity.this,homePage.class);
+//            startActivity(intent);
+//        }
         forpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserLoginActivity.this, ForgetPass.class);
+                Intent intent = new Intent(UserLoginActivity.this, ForgetPassUser.class);
                 startActivity(intent);
             }
         });
@@ -127,6 +134,7 @@ public class UserLoginActivity extends AppCompatActivity {
     }
 
     private void authenticate_user() {
+
         progressDialog.setTitle("Login...");
         progressDialog.setMessage("Wait while we authenticate...");
         progressDialog.setCanceledOnTouchOutside(false);
@@ -143,17 +151,65 @@ public class UserLoginActivity extends AppCompatActivity {
             pass_login.setError("Password is required!");
         }
         else{
+
             mAuth.signInWithEmailAndPassword(email, pass)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                FirebaseDatabase.getInstance().getReference("Sellers")
+                                FirebaseDatabase.getInstance().getReference("Users")
                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                         .addListenerForSingleValueEvent(new ValueEventListener() {
                                             @Override
                                             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                                CurrentSeller.currentSeller = snapshot.getValue(Seller.class);
+                                                uniqueUser u =new uniqueUser(email);
+                                                CurrentUser.currentUser = snapshot.getValue(User.class);
+                                              //  FirebaseDatabase db = FirebaseDatabase.getInstance();
+//                                                DatabaseReference cart = db.getReference("CartPresentUser");
+//                                                DatabaseReference wish = db.getReference("WishlistPresentUser");
+//                                                DatabaseReference order = db.getReference("OrderPresentUser");
+//                                                cart.addListenerForSingleValueEvent(new ValueEventListener() {
+//                                                    @Override
+//                                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                                                        for(DataSnapshot snapshot1:snapshot.getChildren())
+//                                                        {
+//                                                            cart.child(snapshot1.child("parent").getValue().toString()).removeValue();
+//                                                        }
+//                                                    }
+//
+//                                                    @Override
+//                                                    public void onCancelled(@NonNull DatabaseError error) {
+//
+//                                                    }
+//                                                });
+//                                                wish.addListenerForSingleValueEvent(new ValueEventListener() {
+//                                                    @Override
+//                                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                                                        for(DataSnapshot snapshot1:snapshot.getChildren())
+//                                                        {
+//                                                            wish.child(snapshot1.child("parent").getValue().toString()).removeValue();
+//                                                        }
+//                                                    }
+//
+//                                                    @Override
+//                                                    public void onCancelled(@NonNull DatabaseError error) {
+//
+//                                                    }
+//                                                });
+//                                                order.addListenerForSingleValueEvent(new ValueEventListener() {
+//                                                    @Override
+//                                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                                                        for(DataSnapshot snapshot1:snapshot.getChildren())
+//                                                        {
+//                                                            order.child(snapshot1.child("parent").getValue().toString()).removeValue();
+//                                                        }
+//                                                    }
+//
+//                                                    @Override
+//                                                    public void onCancelled(@NonNull DatabaseError error) {
+//
+//                                                    }
+//                                                });
                                                 Intent intent = new Intent(UserLoginActivity.this, homePage.class);
                                                 startActivity(intent);
                                             }
@@ -172,4 +228,4 @@ public class UserLoginActivity extends AppCompatActivity {
                     });
         }
     }
-    }
+}

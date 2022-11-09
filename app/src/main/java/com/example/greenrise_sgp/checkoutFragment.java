@@ -37,6 +37,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 
 public class checkoutFragment extends Fragment {
@@ -54,8 +55,9 @@ public class checkoutFragment extends Fragment {
     String EmphericalKey;
   String clientSecret;
   View view1;
+    TextView tv;
     String name,unitprice,currentdate,currenttime,totalquantity,totalprice,UUID,SUID,parent,image;
-
+    String quantityInPlants;
     RecyclerView rv;
     myadapter adapter;
     static int i=0;
@@ -92,7 +94,26 @@ public class checkoutFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_checkout, container, false);
         view1=view;
-        TextView tv = view.findViewById(R.id.textView);
+        tv = view.findViewById(R.id.textView);
+        TextView tv1 = view.findViewById(R.id.quote);
+        FirebaseDatabase db1 = FirebaseDatabase.getInstance();
+        DatabaseReference quotes = db1.getReference("Quotes");
+        quotes.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                    Random random = new Random();
+                    int random1=random.nextInt(21)+1;
+                    String k1="q"+random1;
+                    DataSnapshot snapshot1=snapshot.child(String.valueOf(random1));
+                tv1.setText("\""+snapshot1.child(k1).getValue().toString()+"\"");
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         btn = view.findViewById(R.id.button6);
         tv.setText("Your total amount is:"+totalPrice);
         btn.setEnabled(false);
@@ -139,41 +160,6 @@ public class checkoutFragment extends Fragment {
             public void onClick(View view) {
               //  gotoURL("https://buy.stripe.com/test_28o3fK9a0glTcsEfYZ?default_price="+totalPrice);
                 PaymentFlow();
-                FirebaseDatabase db = FirebaseDatabase.getInstance();
-                DatabaseReference orders = db.getReference("Orders");
-                DatabaseReference cart =db.getReference("Cart");
-                cart.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        for(DataSnapshot dataSnapshot:snapshot.getChildren())
-                        {
-                            name=dataSnapshot.child("name").getValue().toString();
-                             unitprice=dataSnapshot.child("unitprice").getValue().toString();
-                             currentdate=dataSnapshot.child("currentdate").getValue().toString();
-                             currenttime=dataSnapshot.child("currenttime").getValue().toString();
-                             totalquantity=dataSnapshot.child("totalquantity").getValue().toString();
-                             totalprice=dataSnapshot.child("totalprice").getValue().toString();
-                             UUID=dataSnapshot.child("uuid").getValue().toString();
-                             SUID=dataSnapshot.child("suid").getValue().toString();
-                             parent=dataSnapshot.child("parent").getValue().toString();
-                             image=dataSnapshot.child("image").getValue().toString();
-                            cartModel cm = new cartModel(name, unitprice, currentdate, currenttime, totalquantity, totalprice,UUID, SUID, String.valueOf(i),image);
-                            orders.child(String.valueOf(i)).setValue(cm);
-                            i++;
-                            cart.child(parent).removeValue();
-                            tv.setText("You have nothing in cart!");
-                        }
-
-                    }
-
-
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
-
             }
         });
         return view;
@@ -183,6 +169,60 @@ public class checkoutFragment extends Fragment {
         if(paymentSheetResult instanceof  PaymentSheetResult.Completed)
         {
             Toast.makeText(view1.getContext(),"Succesful payment",Toast.LENGTH_SHORT).show();
+            tv = view1.findViewById(R.id.textView);
+            FirebaseDatabase db = FirebaseDatabase.getInstance();
+            DatabaseReference orders = db.getReference("Orders");
+            DatabaseReference cart =db.getReference("CartPresentUser");
+            DatabaseReference cart1 =db.getReference("Cart");
+            DatabaseReference plants =db.getReference("Plants");
+            cart.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for(DataSnapshot dataSnapshot:snapshot.getChildren())
+                    {
+                        name=dataSnapshot.child("name").getValue().toString();
+                        unitprice=dataSnapshot.child("unitprice").getValue().toString();
+                        currentdate=dataSnapshot.child("currentdate").getValue().toString();
+                        currenttime=dataSnapshot.child("currenttime").getValue().toString();
+                        totalquantity=dataSnapshot.child("totalquantity").getValue().toString();
+                        totalprice=dataSnapshot.child("totalprice").getValue().toString();
+                        UUID=dataSnapshot.child("uuid").getValue().toString();
+                        SUID=dataSnapshot.child("suid").getValue().toString();
+                        parent=dataSnapshot.child("parent").getValue().toString();
+                        image=dataSnapshot.child("image").getValue().toString();
+                        cartModel cm = new cartModel(name, unitprice, currentdate, currenttime, totalquantity, totalprice,UUID, SUID,parent,image);
+                        orders.child(parent).setValue(cm);
+                      //  i++;
+                        plants.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                HashMap updateq=new HashMap();
+                                quantityInPlants=String.valueOf(Integer.parseInt(snapshot.child("quantity").getValue().toString())+Integer.parseInt(totalquantity));
+                                updateq.put("quantity",quantityInPlants);
+                                plants.child(parent).updateChildren(updateq);
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
+
+
+                        cart.child(parent).removeValue();
+                        cart1.child(parent).removeValue();
+                        tv.setText("You have nothing in cart!");
+                    }
+
+                }
+
+
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
 
         }
     }
