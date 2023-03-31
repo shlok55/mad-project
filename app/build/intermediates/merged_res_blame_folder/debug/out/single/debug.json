@@ -1,0 +1,418 @@
+[
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.greenrise_sgp.app-pngs-67:/drawable-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_sellertype.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/sellertype.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_sellers.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/sellers.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_port.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/port.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_content_seller_information.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/content_seller_information.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_img_7.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/img_7.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_mail.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/mail.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_add.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/add.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_activity_seller_orders.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_seller_orders.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_activity_seller_information.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_seller_information.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_log.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/log.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_fragment_desc_fragmant.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_desc_fragmant.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_wish.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/wish.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_activity_seller_profile.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_seller_profile.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_activity_seller_home.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_seller_home.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_img_6.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/img_6.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_singleroworderdesign.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/singleroworderdesign.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_img_1.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/img_1.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_seller.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/seller.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_wishh.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/wishh.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_useri.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/useri.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_name.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/name.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_selector.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/selector.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/menu_bottomnav.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/menu/bottomnav.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.greenrise_sgp.app-pngs-67:/drawable-ldpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_activity_forget_pass_user.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_forget_pass_user.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_fragment_profile.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.greenrise_sgp.app-pngs-67:/drawable-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_img.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/img.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_img_4.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/img_4.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_singlerowwishdesign.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/singlerowwishdesign.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_plantpic.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/plantpic.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_ic_baseline_update_24.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/ic_baseline_update_24.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_fragment_wish.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_wish.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_activity_user_login.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_user_login.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_ic_baseline_home_24.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/ic_baseline_home_24.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_fragment_home.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_buyer.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/buyer.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_img_3.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/img_3.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_background.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/background.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.greenrise_sgp.app-pngs-67:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_ic_baseline_shopping_cart_24.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/ic_baseline_shopping_cart_24.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_orderentry.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/orderentry.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_ic_baseline_delete_forever_24.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/ic_baseline_delete_forever_24.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.greenrise_sgp.app-pngs-67:/drawable-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_singlerowcartdesign.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/singlerowcartdesign.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_ic_baseline_add_circle_outline_24.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/ic_baseline_add_circle_outline_24.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_fragment_my_info.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_my_info.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_img_2.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/img_2.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_fragment_order.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_order.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_activity_plant_list2.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_plant_list2.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_singlerowdesign.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/singlerowdesign.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_fragment_buy.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_buy.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_bg.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/bg.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.greenrise_sgp.app-pngs-67:/drawable-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_activity_home_page.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_home_page.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_ic_baseline_add_box_24.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/ic_baseline_add_box_24.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_userpic.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/userpic.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_content_forget_pass_user.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/content_forget_pass_user.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/navigation_nav_graph.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.greenrise_sgp.app-pngs-67:/drawable-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_ic_baseline_delete_24.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/ic_baseline_delete_24.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_ic_baseline_create_24.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/ic_baseline_create_24.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_phone.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/phone.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_fragment_checkout.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_checkout.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_upipic.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/upipic.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_plantentry.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/plantentry.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_plantupdate.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/plantupdate.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/navigation_nav_graph2.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/navigation/nav_graph2.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_activity_seller_register.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_seller_register.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_google.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/google.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_img_5.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/img_5.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/color_icon_color.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/color/icon_color.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_bg_login_reg.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/bg_login_reg.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_googlelogo.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/googlelogo.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_activity_seller_login.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_seller_login.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_activity_main.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_ic_baseline_person_24.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/ic_baseline_person_24.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_orders.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/orders.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_upi.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/upi.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_ic_baseline_remove_24.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/ic_baseline_remove_24.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/raw_tree.json.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/raw/tree.json"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_activity_user_register.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_user_register.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable_ic_baseline_add_24.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable/ic_baseline_add_24.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_order.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/order.png"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/layout_activity_forget_pass.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_forget_pass.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/xml_backup_rules.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_back.xml.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/back.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-merged_res-72:/drawable-v24_user.png.flat",
+        "source": "com.example.greenrise_sgp.app-main-74:/drawable-v24/user.png"
+    }
+]

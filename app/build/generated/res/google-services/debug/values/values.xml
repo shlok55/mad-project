@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">581224693960-n9otpt200bc7jha0jg7nbp3b51vpedmf.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://greenrise-sgp-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">581224693960</string>
+    <string name="google_api_key" translatable="false">AIzaSyCf1sN8MckHaPBe71TUv6HmmEN-VYvUnUM</string>
+    <string name="google_app_id" translatable="false">1:581224693960:android:1cf427f251a7cf7d30e5fd</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCf1sN8MckHaPBe71TUv6HmmEN-VYvUnUM</string>
+    <string name="google_storage_bucket" translatable="false">greenrise-sgp.appspot.com</string>
+    <string name="project_id" translatable="false">greenrise-sgp</string>
+</resources>

@@ -1,0 +1,122 @@
+[
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/activity_seller_register.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_seller_register.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/activity_forget_pass_user.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_forget_pass_user.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/activity_seller_login.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_seller_login.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/singlerowdesign.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/singlerowdesign.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/fragment_buy.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_buy.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/content_seller_information.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/content_seller_information.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/activity_seller_home.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_seller_home.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/fragment_wish.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_wish.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/singleroworderdesign.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/singleroworderdesign.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/plantupdate.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/plantupdate.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/fragment_order.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_order.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/activity_seller_information.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_seller_information.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/activity_user_login.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_user_login.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/content_forget_pass_user.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/content_forget_pass_user.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/singlerowcartdesign.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/singlerowcartdesign.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/activity_seller_orders.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_seller_orders.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/activity_seller_profile.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_seller_profile.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/activity_plant_list2.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_plant_list2.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/orderentry.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/orderentry.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/fragment_home.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/fragment_checkout.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_checkout.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/activity_main.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/plantentry.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/plantentry.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/singlerowwishdesign.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/singlerowwishdesign.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/fragment_profile.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/activity_home_page.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_home_page.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/fragment_desc_fragmant.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_desc_fragmant.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/activity_user_register.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_user_register.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/fragment_my_info.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/fragment_my_info.xml"
+    },
+    {
+        "merged": "com.example.greenrise_sgp.app-mergeDebugResources-71:/layout/activity_forget_pass.xml",
+        "source": "com.example.greenrise_sgp.app-main-74:/layout/activity_forget_pass.xml"
+    }
+]

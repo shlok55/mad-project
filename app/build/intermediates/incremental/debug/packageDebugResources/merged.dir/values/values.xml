@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="green">#025A0F</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="light_green">#90ee90</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="fab_margin">16dp</dimen>
+    <string name="Buy">Buy</string>
+    <string name="Home">Home</string>
+    <string name="Profile">Profile</string>
+    <string name="Rs">\u20B9</string>
+    <string name="SeasonsFav">Seasons Favorite</string>
+    <string name="app_name">Greenrise</string>
+    <string name="blank"/>
+    <string name="default_web_client_id" translatable="false">581224693960-n9otpt200bc7jha0jg7nbp3b51vpedmf.apps.googleusercontent.com</string>
+    <string name="dummy_content">See All Your Products</string>
+    <string name="firebase_database_url" translatable="false">https://greenrise-sgp-default-rtdb.firebaseio.com</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="gcm_defaultSenderId" translatable="false">581224693960</string>
+    <string name="google_api_key" translatable="false">AIzaSyCf1sN8MckHaPBe71TUv6HmmEN-VYvUnUM</string>
+    <string name="google_app_id" translatable="false">1:581224693960:android:1cf427f251a7cf7d30e5fd</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCf1sN8MckHaPBe71TUv6HmmEN-VYvUnUM</string>
+    <string name="google_storage_bucket" translatable="false">greenrise-sgp.appspot.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="next">Next</string>
+    <string name="p1">p1</string>
+    <string name="p2">p2</string>
+    <string name="p3">p3</string>
+    <string name="previous">Previous</string>
+    <string name="project_id" translatable="false">greenrise-sgp</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="spinner_title">Seller Type</string>
+    <string name="title_activity_forget_pass_user">ForgetPassUser</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="title_activity_seller_information">SellerInformationActivity</string>
+    <style name="Theme.Greenrise_SGP" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        
+    </style>
+    <style name="Theme.Greenrise_SGP.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.Greenrise_SGP.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Greenrise_SGP.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="Widget.Theme.Greenify.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+    <style name="Widget.Theme.Greenify.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+</resources>

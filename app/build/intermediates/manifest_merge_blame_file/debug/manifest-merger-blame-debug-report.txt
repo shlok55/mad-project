@@ -1,0 +1,509 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.greenrise_sgp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:6:5-67
+11-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:6:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:7:5-79
+12-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:7:22-76
+13
+14    <!-- See https://developer.android.com/training/package-visibility/declaring for more details. -->
+15    <queries>
+15-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:10:5-14:15
+16
+17        <!-- Added to check if Chrome is installed for browser-based payment authentication (e.g. 3DS1). -->
+18        <package android:name="com.android.chrome" />
+18-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:13:9-54
+18-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:13:18-51
+19    </queries>
+20
+21    <uses-feature
+21-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\hetvi\.gradle\caches\transforms-3\cfc84c93b06d1e73c7d1b717a1a48b8e\transformed\play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+22        android:glEsVersion="0x00020000"
+22-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\hetvi\.gradle\caches\transforms-3\cfc84c93b06d1e73c7d1b717a1a48b8e\transformed\play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+23        android:required="true" />
+23-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\hetvi\.gradle\caches\transforms-3\cfc84c93b06d1e73c7d1b717a1a48b8e\transformed\play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+24
+25    <application
+25-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:9:5-68:19
+26        android:allowBackup="true"
+26-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:10:9-35
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.8.0] C:\Users\hetvi\.gradle\caches\transforms-3\b358db6c4badd91532e07e741dfb3644\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+28        android:dataExtractionRules="@xml/data_extraction_rules"
+28-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:11:9-65
+29        android:debuggable="true"
+30        android:fullBackupContent="@xml/backup_rules"
+30-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:12:9-54
+31        android:icon="@mipmap/ic_launcher"
+31-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:13:9-43
+32        android:label="@string/app_name"
+32-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:14:9-41
+33        android:roundIcon="@mipmap/ic_launcher_round"
+33-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:15:9-54
+34        android:supportsRtl="true"
+34-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:16:9-35
+35        android:testOnly="true"
+36        android:theme="@style/Theme.Greenrise_SGP" >
+36-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:17:9-51
+37        <activity
+37-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:19:9-23:70
+38            android:name="com.example.greenrise_sgp.SellerInformationActivity"
+38-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:20:13-54
+39            android:exported="false"
+39-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:21:13-37
+40            android:label="@string/title_activity_seller_information"
+40-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:22:13-70
+41            android:theme="@style/Theme.Greenrise_SGP.NoActionBar" />
+41-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:23:13-67
+42        <activity
+42-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:24:9-28:70
+43            android:name="com.example.greenrise_sgp.ForgetPassUser"
+43-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:25:13-43
+44            android:exported="false"
+44-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:26:13-37
+45            android:label="@string/title_activity_forget_pass_user"
+45-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:27:13-68
+46            android:theme="@style/Theme.Greenrise_SGP.NoActionBar" />
+46-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:28:13-67
+47        <activity
+47-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:29:9-31:40
+48            android:name="com.example.greenrise_sgp.UserLoginActivity"
+48-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:30:13-46
+49            android:exported="false" />
+49-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:31:13-37
+50        <activity
+50-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:32:9-34:40
+51            android:name="com.example.greenrise_sgp.UserRegisterActivity"
+51-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:33:13-49
+52            android:exported="false" />
+52-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:34:13-37
+53        <activity
+53-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:35:9-37:40
+54            android:name="com.example.greenrise_sgp.homePage"
+54-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:36:13-37
+55            android:exported="false" />
+55-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:37:13-37
+56        <activity
+56-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:38:9-40:40
+57            android:name="com.example.greenrise_sgp.SellerOrdersActivity"
+57-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:39:13-49
+58            android:exported="false" />
+58-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:40:13-37
+59        <activity
+59-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:41:9-43:40
+60            android:name="com.example.greenrise_sgp.SellerProfileActivity"
+60-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:42:13-50
+61            android:exported="false" />
+61-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:43:13-37
+62        <activity
+62-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:44:9-46:40
+63            android:name="com.example.greenrise_sgp.PlantListActivity"
+63-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:45:13-46
+64            android:exported="false" />
+64-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:46:13-37
+65        <activity
+65-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:47:9-49:40
+66            android:name="com.example.greenrise_sgp.ForgetPass"
+66-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:48:13-39
+67            android:exported="false" />
+67-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:49:13-37
+68        <activity
+68-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:50:9-52:40
+69            android:name="com.example.greenrise_sgp.SellerHomeActivity"
+69-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:51:13-47
+70            android:exported="false" />
+70-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:52:13-37
+71        <activity
+71-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:53:9-55:40
+72            android:name="com.example.greenrise_sgp.SellerLoginActivity"
+72-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:54:13-48
+73            android:exported="false" />
+73-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:55:13-37
+74        <activity
+74-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:56:9-58:40
+75            android:name="com.example.greenrise_sgp.SellerRegisterActivity"
+75-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:57:13-51
+76            android:exported="false" />
+76-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:58:13-37
+77        <activity
+77-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:59:9-67:20
+78            android:name="com.example.greenrise_sgp.MainActivity"
+78-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:60:13-41
+79            android:exported="true" >
+79-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:61:13-36
+80            <intent-filter>
+80-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:62:13-66:29
+81                <action android:name="android.intent.action.MAIN" />
+81-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:63:17-69
+81-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:63:25-66
+82
+83                <category android:name="android.intent.category.LAUNCHER" />
+83-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:65:17-77
+83-->C:\Users\hetvi\OneDrive\Desktop\GreenRiseSeller\app\src\main\AndroidManifest.xml:65:27-74
+84            </intent-filter>
+85        </activity>
+86        <activity
+86-->[com.stripe:paymentsheet:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\915d92df9f91d22929d0ab421b98bfd2\transformed\paymentsheet-17.2.0\AndroidManifest.xml:10:9-13:69
+87            android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
+87-->[com.stripe:paymentsheet:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\915d92df9f91d22929d0ab421b98bfd2\transformed\paymentsheet-17.2.0\AndroidManifest.xml:11:13-80
+88            android:exported="false"
+88-->[com.stripe:paymentsheet:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\915d92df9f91d22929d0ab421b98bfd2\transformed\paymentsheet-17.2.0\AndroidManifest.xml:12:13-37
+89            android:theme="@style/StripePaymentSheetDefaultTheme" />
+89-->[com.stripe:paymentsheet:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\915d92df9f91d22929d0ab421b98bfd2\transformed\paymentsheet-17.2.0\AndroidManifest.xml:13:13-66
+90        <activity
+90-->[com.stripe:paymentsheet:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\915d92df9f91d22929d0ab421b98bfd2\transformed\paymentsheet-17.2.0\AndroidManifest.xml:14:9-17:69
+91            android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"
+91-->[com.stripe:paymentsheet:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\915d92df9f91d22929d0ab421b98bfd2\transformed\paymentsheet-17.2.0\AndroidManifest.xml:15:13-82
+92            android:exported="false"
+92-->[com.stripe:paymentsheet:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\915d92df9f91d22929d0ab421b98bfd2\transformed\paymentsheet-17.2.0\AndroidManifest.xml:16:13-37
+93            android:theme="@style/StripePaymentSheetDefaultTheme" />
+93-->[com.stripe:paymentsheet:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\915d92df9f91d22929d0ab421b98bfd2\transformed\paymentsheet-17.2.0\AndroidManifest.xml:17:13-66
+94        <activity
+94-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:17:9-20:57
+95            android:name="com.stripe.android.view.AddPaymentMethodActivity"
+95-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:18:13-76
+96            android:exported="false"
+96-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:19:13-37
+97            android:theme="@style/StripeDefaultTheme" />
+97-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:20:13-54
+98        <activity
+98-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:21:9-24:57
+99            android:name="com.stripe.android.view.PaymentMethodsActivity"
+99-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:22:13-74
+100            android:exported="false"
+100-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:23:13-37
+101            android:theme="@style/StripeDefaultTheme" />
+101-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:24:13-54
+102        <activity
+102-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:25:9-28:57
+103            android:name="com.stripe.android.view.PaymentFlowActivity"
+103-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:26:13-71
+104            android:exported="false"
+104-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:27:13-37
+105            android:theme="@style/StripeDefaultTheme" />
+105-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:28:13-54
+106        <activity
+106-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:29:9-33:58
+107            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
+107-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:30:13-78
+108            android:exported="false"
+108-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:31:13-37
+109            android:theme="@style/StripeDefaultTheme"
+109-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:32:13-54
+110            android:windowSoftInputMode="adjustResize" />
+110-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:33:13-55
+111        <activity
+111-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:34:9-37:61
+112            android:name="com.stripe.android.view.PaymentRelayActivity"
+112-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:35:13-72
+113            android:exported="false"
+113-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:36:13-37
+114            android:theme="@style/StripeTransparentTheme" />
+114-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:37:13-58
+115        <!--
+116        Set android:launchMode="singleTop" so that the StripeBrowserLauncherActivity instance that
+117        launched the browser Activity will also handle the return URL deep link.
+118        -->
+119        <activity
+119-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:43:9-60:20
+120            android:name="com.stripe.android.payments.StripeBrowserLauncherActivity"
+120-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:44:13-85
+121            android:exported="true"
+121-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:45:13-36
+122            android:launchMode="singleTask"
+122-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:46:13-44
+123            android:theme="@style/StripeTransparentTheme" >
+123-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:47:13-58
+124            <intent-filter>
+124-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:48:13-59:29
+125                <action android:name="android.intent.action.VIEW" />
+125-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:49:17-69
+125-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:49:25-66
+126
+127                <category android:name="android.intent.category.DEFAULT" />
+127-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:51:17-76
+127-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:51:27-73
+128                <category android:name="android.intent.category.BROWSABLE" />
+128-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:52:17-78
+128-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:52:27-75
+129
+130                <!-- Must match `DefaultReturnUrl#value`. -->
+131                <data
+131-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:55:17-58:50
+132                    android:host="payment_return_url"
+132-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:56:21-54
+133                    android:path="/com.example.greenrise_sgp"
+133-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:57:21-53
+134                    android:scheme="stripesdk" />
+134-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:58:21-47
+135            </intent-filter>
+136        </activity>
+137        <activity
+137-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:61:9-64:57
+138            android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity"
+138-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:62:13-114
+139            android:exported="false"
+139-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:63:13-37
+140            android:theme="@style/StripeDefaultTheme" />
+140-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:64:13-54
+141        <activity
+141-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:65:9-68:66
+142            android:name="com.stripe.android.googlepaylauncher.StripeGooglePayActivity"
+142-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:66:13-88
+143            android:exported="false"
+143-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:67:13-37
+144            android:theme="@style/StripeGooglePayDefaultTheme" />
+144-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:68:13-63
+145        <activity
+145-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:69:9-72:66
+146            android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity"
+146-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:70:13-90
+147            android:exported="false"
+147-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:71:13-37
+148            android:theme="@style/StripeGooglePayDefaultTheme" />
+148-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:72:13-63
+149        <activity
+149-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:73:9-76:66
+150            android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity"
+150-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:74:13-103
+151            android:exported="false"
+151-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:75:13-37
+152            android:theme="@style/StripeGooglePayDefaultTheme" />
+152-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:76:13-63
+153        <activity
+153-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:77:9-80:62
+154            android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity"
+154-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:78:13-107
+155            android:exported="false"
+155-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:79:13-37
+156            android:theme="@style/PayLauncherDefaultTheme" />
+156-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:80:13-59
+157        <activity
+157-->[com.stripe:stripe-3ds2-android:6.1.2] C:\Users\hetvi\.gradle\caches\transforms-3\b8cae36afe1c195104e087f54c57f2b2\transformed\stripe-3ds2-android-6.1.2\AndroidManifest.xml:10:9-13:54
+158            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
+158-->[com.stripe:stripe-3ds2-android:6.1.2] C:\Users\hetvi\.gradle\caches\transforms-3\b8cae36afe1c195104e087f54c57f2b2\transformed\stripe-3ds2-android-6.1.2\AndroidManifest.xml:11:13-81
+159            android:exported="false"
+159-->[com.stripe:stripe-3ds2-android:6.1.2] C:\Users\hetvi\.gradle\caches\transforms-3\b8cae36afe1c195104e087f54c57f2b2\transformed\stripe-3ds2-android-6.1.2\AndroidManifest.xml:12:13-37
+160            android:theme="@style/Stripe3DS2Theme" />
+160-->[com.stripe:stripe-3ds2-android:6.1.2] C:\Users\hetvi\.gradle\caches\transforms-3\b8cae36afe1c195104e087f54c57f2b2\transformed\stripe-3ds2-android-6.1.2\AndroidManifest.xml:13:13-51
+161
+162        <service
+162-->[com.google.firebase:firebase-database:20.0.5] C:\Users\hetvi\.gradle\caches\transforms-3\93c7190154a0ec630b5bfd376a6ac56b\transformed\firebase-database-20.0.5\AndroidManifest.xml:29:9-35:19
+163            android:name="com.google.firebase.components.ComponentDiscoveryService"
+163-->[com.google.firebase:firebase-database:20.0.5] C:\Users\hetvi\.gradle\caches\transforms-3\93c7190154a0ec630b5bfd376a6ac56b\transformed\firebase-database-20.0.5\AndroidManifest.xml:30:13-84
+164            android:directBootAware="true"
+164-->[com.google.firebase:firebase-common:20.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\0dc1000db244e4102c2c0eb9b1815f7c\transformed\firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+165            android:exported="false" >
+165-->[com.google.firebase:firebase-database:20.0.5] C:\Users\hetvi\.gradle\caches\transforms-3\93c7190154a0ec630b5bfd376a6ac56b\transformed\firebase-database-20.0.5\AndroidManifest.xml:31:13-37
+166            <meta-data
+166-->[com.google.firebase:firebase-database:20.0.5] C:\Users\hetvi\.gradle\caches\transforms-3\93c7190154a0ec630b5bfd376a6ac56b\transformed\firebase-database-20.0.5\AndroidManifest.xml:32:13-34:85
+167                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+167-->[com.google.firebase:firebase-database:20.0.5] C:\Users\hetvi\.gradle\caches\transforms-3\93c7190154a0ec630b5bfd376a6ac56b\transformed\firebase-database-20.0.5\AndroidManifest.xml:33:17-109
+168                android:value="com.google.firebase.components.ComponentRegistrar" />
+168-->[com.google.firebase:firebase-database:20.0.5] C:\Users\hetvi\.gradle\caches\transforms-3\93c7190154a0ec630b5bfd376a6ac56b\transformed\firebase-database-20.0.5\AndroidManifest.xml:34:17-82
+169            <meta-data
+169-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:67:13-69:85
+170                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+170-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:68:17-109
+171                android:value="com.google.firebase.components.ComponentRegistrar" />
+171-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:69:17-82
+172            <meta-data
+172-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\hetvi\.gradle\caches\transforms-3\a71d40c0dcf441dfe0528eb234603dc4\transformed\firebase-storage-20.1.0\AndroidManifest.xml:32:13-34:85
+173                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+173-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\hetvi\.gradle\caches\transforms-3\a71d40c0dcf441dfe0528eb234603dc4\transformed\firebase-storage-20.1.0\AndroidManifest.xml:33:17-107
+174                android:value="com.google.firebase.components.ComponentRegistrar" />
+174-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\hetvi\.gradle\caches\transforms-3\a71d40c0dcf441dfe0528eb234603dc4\transformed\firebase-storage-20.1.0\AndroidManifest.xml:34:17-82
+175        </service>
+176
+177        <activity
+177-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:27:9-44:20
+178            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+178-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:28:13-80
+179            android:excludeFromRecents="true"
+179-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:29:13-46
+180            android:exported="true"
+180-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:30:13-36
+181            android:launchMode="singleTask"
+181-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:31:13-44
+182            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+182-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:32:13-72
+183            <intent-filter>
+183-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:33:13-43:29
+184                <action android:name="android.intent.action.VIEW" />
+184-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:49:17-69
+184-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:49:25-66
+185
+186                <category android:name="android.intent.category.DEFAULT" />
+186-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:51:17-76
+186-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:51:27-73
+187                <category android:name="android.intent.category.BROWSABLE" />
+187-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:52:17-78
+187-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:52:27-75
+188
+189                <data
+189-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:55:17-58:50
+190                    android:host="firebase.auth"
+190-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:56:21-54
+191                    android:path="/"
+191-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:57:21-53
+192                    android:scheme="genericidp" />
+192-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:58:21-47
+193            </intent-filter>
+194        </activity>
+195        <activity
+195-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:45:9-62:20
+196            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+196-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:46:13-79
+197            android:excludeFromRecents="true"
+197-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:47:13-46
+198            android:exported="true"
+198-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:48:13-36
+199            android:launchMode="singleTask"
+199-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:49:13-44
+200            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+200-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:50:13-72
+201            <intent-filter>
+201-->[com.google.firebase:firebase-auth:21.0.8] C:\Users\hetvi\.gradle\caches\transforms-3\6880262fed7c543779985a4a88b6c4ba\transformed\firebase-auth-21.0.8\AndroidManifest.xml:51:13-61:29
+202                <action android:name="android.intent.action.VIEW" />
+202-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:49:17-69
+202-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:49:25-66
+203
+204                <category android:name="android.intent.category.DEFAULT" />
+204-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:51:17-76
+204-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:51:27-73
+205                <category android:name="android.intent.category.BROWSABLE" />
+205-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:52:17-78
+205-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:52:27-75
+206
+207                <data
+207-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:55:17-58:50
+208                    android:host="firebase.auth"
+208-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:56:21-54
+209                    android:path="/"
+209-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:57:21-53
+210                    android:scheme="recaptcha" />
+210-->[com.stripe:payments-core:17.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\a79f38faba8ce104ccc663a04c583678\transformed\payments-core-17.2.0\AndroidManifest.xml:58:21-47
+211            </intent-filter>
+212        </activity>
+213        <activity
+213-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\hetvi\.gradle\caches\transforms-3\49cf444ee4d3e71b5b054cf172456bbe\transformed\play-services-auth-20.3.0\AndroidManifest.xml:23:9-27:75
+214            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+214-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\hetvi\.gradle\caches\transforms-3\49cf444ee4d3e71b5b054cf172456bbe\transformed\play-services-auth-20.3.0\AndroidManifest.xml:24:13-93
+215            android:excludeFromRecents="true"
+215-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\hetvi\.gradle\caches\transforms-3\49cf444ee4d3e71b5b054cf172456bbe\transformed\play-services-auth-20.3.0\AndroidManifest.xml:25:13-46
+216            android:exported="false"
+216-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\hetvi\.gradle\caches\transforms-3\49cf444ee4d3e71b5b054cf172456bbe\transformed\play-services-auth-20.3.0\AndroidManifest.xml:26:13-37
+217            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+217-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\hetvi\.gradle\caches\transforms-3\49cf444ee4d3e71b5b054cf172456bbe\transformed\play-services-auth-20.3.0\AndroidManifest.xml:27:13-72
+218        <!--
+219            Service handling Google Sign-In user revocation. For apps that do not integrate with
+220            Google Sign-In, this service will never be started.
+221        -->
+222        <service
+222-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\hetvi\.gradle\caches\transforms-3\49cf444ee4d3e71b5b054cf172456bbe\transformed\play-services-auth-20.3.0\AndroidManifest.xml:33:9-37:51
+223            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+223-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\hetvi\.gradle\caches\transforms-3\49cf444ee4d3e71b5b054cf172456bbe\transformed\play-services-auth-20.3.0\AndroidManifest.xml:34:13-89
+224            android:exported="true"
+224-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\hetvi\.gradle\caches\transforms-3\49cf444ee4d3e71b5b054cf172456bbe\transformed\play-services-auth-20.3.0\AndroidManifest.xml:35:13-36
+225            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+225-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\hetvi\.gradle\caches\transforms-3\49cf444ee4d3e71b5b054cf172456bbe\transformed\play-services-auth-20.3.0\AndroidManifest.xml:36:13-107
+226            android:visibleToInstantApps="true" />
+226-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\hetvi\.gradle\caches\transforms-3\49cf444ee4d3e71b5b054cf172456bbe\transformed\play-services-auth-20.3.0\AndroidManifest.xml:37:13-48
+227
+228        <provider
+228-->[com.google.firebase:firebase-common:20.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\0dc1000db244e4102c2c0eb9b1815f7c\transformed\firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+229            android:name="com.google.firebase.provider.FirebaseInitProvider"
+229-->[com.google.firebase:firebase-common:20.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\0dc1000db244e4102c2c0eb9b1815f7c\transformed\firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+230            android:authorities="com.example.greenrise_sgp.firebaseinitprovider"
+230-->[com.google.firebase:firebase-common:20.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\0dc1000db244e4102c2c0eb9b1815f7c\transformed\firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+231            android:directBootAware="true"
+231-->[com.google.firebase:firebase-common:20.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\0dc1000db244e4102c2c0eb9b1815f7c\transformed\firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+232            android:exported="false"
+232-->[com.google.firebase:firebase-common:20.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\0dc1000db244e4102c2c0eb9b1815f7c\transformed\firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+233            android:initOrder="100" /> <!-- Needs to be explicitly declared on P+ -->
+233-->[com.google.firebase:firebase-common:20.2.0] C:\Users\hetvi\.gradle\caches\transforms-3\0dc1000db244e4102c2c0eb9b1815f7c\transformed\firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+234        <uses-library
+234-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\hetvi\.gradle\caches\transforms-3\cfc84c93b06d1e73c7d1b717a1a48b8e\transformed\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+235            android:name="org.apache.http.legacy"
+235-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\hetvi\.gradle\caches\transforms-3\cfc84c93b06d1e73c7d1b717a1a48b8e\transformed\play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+236            android:required="false" />
+236-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\hetvi\.gradle\caches\transforms-3\cfc84c93b06d1e73c7d1b717a1a48b8e\transformed\play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+237
+238        <activity
+238-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\hetvi\.gradle\caches\transforms-3\707abad5ea80878aba502f49b9b8ab7c\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+239            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+239-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\hetvi\.gradle\caches\transforms-3\707abad5ea80878aba502f49b9b8ab7c\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+240            android:exported="false"
+240-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\hetvi\.gradle\caches\transforms-3\707abad5ea80878aba502f49b9b8ab7c\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+241            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+241-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\hetvi\.gradle\caches\transforms-3\707abad5ea80878aba502f49b9b8ab7c\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+242
+243        <meta-data
+243-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\hetvi\.gradle\caches\transforms-3\5527bc66570dfd080c8012d3b845e9e6\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+244            android:name="com.google.android.gms.version"
+244-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\hetvi\.gradle\caches\transforms-3\5527bc66570dfd080c8012d3b845e9e6\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+245            android:value="@integer/google_play_services_version" />
+245-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\hetvi\.gradle\caches\transforms-3\5527bc66570dfd080c8012d3b845e9e6\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+246
+247        <provider
+247-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:26:9-34:20
+248            android:name="androidx.startup.InitializationProvider"
+248-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:27:13-67
+249            android:authorities="com.example.greenrise_sgp.androidx-startup"
+249-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:28:13-68
+250            android:exported="false" >
+250-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:29:13-37
+251            <meta-data
+251-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:31:13-33:52
+252                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+252-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:32:17-85
+253                android:value="androidx.startup" />
+253-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:33:17-49
+254        </provider>
+255
+256        <receiver
+256-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:36:9-45:20
+257            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+257-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:37:13-76
+258            android:directBootAware="false"
+258-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:38:13-44
+259            android:enabled="true"
+259-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:39:13-35
+260            android:exported="true"
+260-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:40:13-36
+261            android:permission="android.permission.DUMP" >
+261-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:41:13-57
+262            <intent-filter>
+262-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:42:13-44:29
+263                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+263-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:43:17-91
+263-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\hetvi\.gradle\caches\transforms-3\646bf171e174a25eaba7cd0a482f76f0\transformed\profileinstaller-1.0.2\AndroidManifest.xml:43:25-88
+264            </intent-filter>
+265        </receiver>
+266
+267        <uses-library
+267-->[androidx.window:window:1.0.0] C:\Users\hetvi\.gradle\caches\transforms-3\7c724dfae4eda8f7c746d578e681c16d\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+268            android:name="androidx.window.extensions"
+268-->[androidx.window:window:1.0.0] C:\Users\hetvi\.gradle\caches\transforms-3\7c724dfae4eda8f7c746d578e681c16d\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+269            android:required="false" />
+269-->[androidx.window:window:1.0.0] C:\Users\hetvi\.gradle\caches\transforms-3\7c724dfae4eda8f7c746d578e681c16d\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+270        <uses-library
+270-->[androidx.window:window:1.0.0] C:\Users\hetvi\.gradle\caches\transforms-3\7c724dfae4eda8f7c746d578e681c16d\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+271            android:name="androidx.window.sidecar"
+271-->[androidx.window:window:1.0.0] C:\Users\hetvi\.gradle\caches\transforms-3\7c724dfae4eda8f7c746d578e681c16d\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+272            android:required="false" />
+272-->[androidx.window:window:1.0.0] C:\Users\hetvi\.gradle\caches\transforms-3\7c724dfae4eda8f7c746d578e681c16d\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+273    </application>
+274
+275</manifest>
